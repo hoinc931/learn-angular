@@ -1,0 +1,21 @@
+<form action="">
+    <div class="form-group">
+        <label for="">Name: </label>
+        <input type="text" name="name" id="name" [(ngModel)]="product.name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Image Link: </label>
+        <input type="text" name="image" id="image" [(ngModel)]="product.image" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Price: </label>
+        <input type="number" name="price" id="price" [(ngModel)]="product.price" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Status: </label>
+        <input type="checkbox" name="status" id="status" [(ngModel)]="product.status" class="form-check">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-ouline-primary" (click)="handleAdd()">Add</button>
+    </div>
+</form>

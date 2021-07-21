@@ -1,0 +1,8 @@
+<div *ngIf="product">
+    <ol>
+        <li>Name: {{product.name}}</li>
+        <li>Price: {{product.price}}</li>
+        <li>Status: {{product.status ? "true" : "false"}}</li>
+        <li>Image: <img [src]="product.image" width="200px" alt=""></li>
+    </ol>
+</div>

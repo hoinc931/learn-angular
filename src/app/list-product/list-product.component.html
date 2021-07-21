@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table w-100 table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Price</th>
+        <th scope="col">Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{product.name}}</td>
+        <td><img [src]="product.image" width="100px" alt=""></td>
+        <td>{{product.price}}</td>
+        <td>{{product.status ? "Còn hàng" : "Hết cmnr"}}</td>
+        <td>
+          <a routerLink="/product/{{product.id}}/detail" class="btn btn-success">Detail</a>
+          <button (click)="handleRemove(product.id)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
